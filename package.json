@@ -27,5 +27,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "---",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaichiro/tic-tac-toe.git"
+  },
+  "keywords": [
+    "tic-tac-toe",
+    "game",
+    "react"
+  ],
+  "author": "Kaichiro Fukuda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaichiro/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/kaichiro/tic-tac-toe#readme"
 }
