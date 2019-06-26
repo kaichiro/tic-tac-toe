@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Board from './Board'
-import { Winner as winner_} from '../utils/Numbers'
+import { Winner as winner_ } from '../utils/Numbers'
 
 export default class Game extends React.Component {
     constructor(props) {
@@ -72,6 +72,11 @@ export default class Game extends React.Component {
             ? `Winner: ${winner}`
             : `Next player: ${this.nextPlayer(this.state.xIsNext)}`
 
+        const gameCrash =
+            !(this.calculateWinner(current.squares).win)
+            && this.state.history.length === 10
+            && this.state.stepNumber === 9
+
         return (
             <div>
                 <h1>TIC-TAC-TOE</h1>
@@ -81,6 +86,7 @@ export default class Game extends React.Component {
                             squares={current.squares}
                             onClick={(i) => this.handleClick(i)}
                             win={this.calculateWinner(current.squares).win}
+                            isCrash={gameCrash}
                         />
                     </div>
                     <div className="game-info">

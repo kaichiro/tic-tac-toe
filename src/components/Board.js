@@ -12,6 +12,7 @@ export default function Board(props) {
                 value={props.squares[i]}
                 onClick={() => props.onClick(i)}
                 isWin={cmp}
+                isCrash={props.isCrash}
             />
         )
     }
